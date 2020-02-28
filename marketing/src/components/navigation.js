@@ -42,16 +42,15 @@ function Nav() {
 export default Nav;
 
 const Div = styled.div`
-  padding: 20px 0 20px 0;
+  padding: 20px 0 15px 0;
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid white;
-  border-radius: 10px;
+  border-radius: 6px;
 
   h4 {
     font-weight: 900;
     color: white;
-
     .Company {
       font-weight: 1;
     }

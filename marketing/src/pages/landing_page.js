@@ -1,16 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import Nav from "../components/navigation";
-import Footer from "../components/footer";
 
 function Landing() {
   return (
     <ThePage>
       <Nav />
-      <h1>Landing Page</h1>
-      {/* <div className="footer">
-        <Footer />
-      </div> */}
+      <header>
+        <p className="statemant">
+          <span className="make">MAKE </span>
+          <span className="your">YOUR</span>
+          <br />
+          <span className="business">BUSSINES </span>
+          <span className="easyer">EASYER</span>
+        </p>
+
+        <p className="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
+          rhoncus nulla. Maecenas sem lorem, aliquam fermentum metus et,
+          ultricies luctus augue. Curabitur aliquet maximus interdum. Nam congue
+          dictum fermentum.
+        </p>
+      </header>
     </ThePage>
   );
 }
@@ -24,11 +35,31 @@ const ThePage = styled.div`
   flex-direction: column;
   min-height: 100%;
 
-  .footer {
-    border: 2px solid red;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0 auto;
+  header {
+    margin-top: 100px;
+    width: 50%;
+    .statemant {
+      font-size: 4em;
+      font-family: "Montserrat";
+      color: white;
+      line-height: normal;
+      .make,
+      .business {
+        font-weight: bold;
+      }
+
+      .your,
+      .easyer {
+        font-weight: lighter;
+      }
+    }
+
+    .description {
+      margin-top: 30px;
+      width: 70%;
+      font-family: "Montserrat";
+      font-weight: lighter;
+      color: white;
+    }
   }
 `;
