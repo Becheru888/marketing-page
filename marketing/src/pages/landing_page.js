@@ -43,8 +43,9 @@ const ThePage = styled.div`
 
     .soft-png {
       img {
-        position: relative;
-        width: 600px;
+        margin-left: 120px;
+        position: absolute;
+        width: 40%;
         height: 600px;
       }
     }

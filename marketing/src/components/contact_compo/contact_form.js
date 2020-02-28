@@ -30,8 +30,9 @@ function Form() {
                       id="name"
                       name="name"
                       className="form-control"
+                      placeholder="Your name"
                     />
-                    <label for="name" className="">
+                    <label for="name" className="" style={{ display: "none" }}>
                       Your name
                     </label>
                   </div>
@@ -44,8 +45,9 @@ function Form() {
                       id="email"
                       name="email"
                       className="form-control"
+                      placeholder="Your email"
                     />
-                    <label for="email" className="">
+                    <label for="email" className="" style={{ display: "none" }}>
                       Your email
                     </label>
                   </div>
@@ -60,8 +62,13 @@ function Form() {
                       id="subject"
                       name="subject"
                       className="form-control"
+                      placeholder="Subject"
                     />
-                    <label for="subject" className="">
+                    <label
+                      for="subject"
+                      className=""
+                      style={{ display: "none" }}
+                    >
                       Subject
                     </label>
                   </div>
@@ -77,8 +84,9 @@ function Form() {
                       name="message"
                       rows="2"
                       className="form-control md-textarea"
+                      placeholder="Your message"
                     ></textarea>
-                    <label for="message">Your message</label>
+                    <label for="message"></label>
                   </div>
                 </div>
               </div>
@@ -121,4 +129,11 @@ function Form() {
 
 export default Form;
 
-const Div = styled.div``;
+const Div = styled.div`
+  .mb-4 {
+    input,
+    textarea {
+      margin: 10px;
+    }
+  }
+`;
