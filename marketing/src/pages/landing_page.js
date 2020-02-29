@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Nav from "../components/navigation";
 import img from "../assets/icons.svg";
+import gsap from "gsap";
 
 function Landing() {
+  useEffect(() => {
+    gsap.to(".make", {
+      duration: 2,
+      opacity: 1,
+      power1: 0.25
+    });
+  });
+
   return (
     <ThePage>
       <Nav />
-
       <div>
         <header>
           <p className="statemant">
@@ -25,7 +33,7 @@ function Landing() {
           </p>
         </header>
         <section className="soft-png">
-          <img srcSet={`${img}`}></img>
+          <img srcSet={`${img}`} alt="business-flow"></img>
         </section>
       </div>
     </ThePage>
@@ -37,7 +45,6 @@ export default Landing;
 const ThePage = styled.div`
   position: relative;
   min-height: 100%;
-
   div {
     display: flex;
 
