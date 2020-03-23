@@ -98,31 +98,6 @@ export default ProductPage;
 
 const ThePage = styled.div`
   max-width: 100%;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   min-height: 100%;
-
-  .main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    z-index: 2;
-
-    .product-1,
-    .product-2,
-    .product-3,
-    .product-4 {
-      font-family: "Montserrat";
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      margin: 50px 10px;
-      background-color: white;
-      border-radius: 5px;
-      width: 45%;
-      height: 300px;
-    }
-  }
+  position: relative;
 `;

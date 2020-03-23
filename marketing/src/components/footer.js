@@ -6,61 +6,54 @@ function Footer() {
   function hooverOn(e) {
     if (e.target.name === "instagram") {
       gsap.to(".insta-link", {
+        display: "inline",
         duration: 1,
         opacity: 1,
-        x: 15
+        x: 10
       });
     } else if (e.target.name === "facebook") {
       gsap.to(".facebook-link", {
         duration: 1,
         opacity: 1,
-        x: 15
+        x: 10
       });
     } else if (e.target.name === "twitter") {
       gsap.to(".twitter-link", {
         duration: 1,
         opacity: 1,
-        x: 15
+        x: 10
       });
     }
   }
 
   function hooverOff(e) {
-    if (e.target.name === "instagram") {
-      gsap.to(".insta-link", {
-        duration: 1,
-        opacity: 0,
-        x: -20
-      });
-    } else if (e.target.name === "facebook") {
-      gsap.to(".facebook-link", {
-        duration: 1,
-        opacity: 0,
-        x: -20
-      });
-    } else if (e.target.name === "twitter") {
-      gsap.to(".twitter-link", {
-        duration: 1,
-        opacity: 0,
-        x: -20
-      });
-    }
+    gsap.to(".icons", {
+      duration: 1,
+      opacity: 0,
+      x: -20
+    });
   }
 
   return (
     <Section>
       <div className="social-icons">
         <div
-          className="icon insta"
+          className="icon"
           onMouseOver={e => hooverOn(e)}
           onMouseLeave={e => hooverOff(e)}
         >
           <img
-            src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png"
+            src="https://img.icons8.com/nolan/64/instagram-new.png"
             alt="instagram icon"
             name="instagram"
           />
-          <p className="insta-link">Instagram link</p>
+          <a
+            href="https://www.instagram.com/omniavisible/"
+            className="insta-link icons"
+            target="_blank"
+          >
+            Instagram
+          </a>
         </div>
         <div
           className="icon"
@@ -68,11 +61,17 @@ function Footer() {
           onMouseLeave={e => hooverOff(e)}
         >
           <img
-            src="https://img.icons8.com/cute-clipart/64/000000/facebook-new.png"
+            src="https://img.icons8.com/nolan/64/facebook-new.png"
             alt="facebook icon"
             name="facebook"
           />
-          <p className="facebook-link">Facebook link</p>
+          <a
+            href="https://www.facebook.com/Omnia-Visible-111085847198157/"
+            className="facebook-link icons"
+            target="_blank"
+          >
+            Facebook
+          </a>
         </div>
         <div
           className="icon"
@@ -80,11 +79,17 @@ function Footer() {
           onMouseLeave={e => hooverOff(e)}
         >
           <img
-            src="https://img.icons8.com/cute-clipart/64/000000/twitter.png"
+            src="https://img.icons8.com/nolan/64/twitter-squared.png"
             alt="icon"
             name="twitter"
           />
-          <p className="twitter-link">Twitter link</p>
+          <a
+            href="https://www.twitter.com/OmniaVisible/"
+            className="twitter-link icons"
+            target="_blank"
+          >
+            Twitter
+          </a>
         </div>
       </div>
     </Section>
@@ -94,8 +99,8 @@ function Footer() {
 export default Footer;
 
 const Section = styled.div`
-  height: 300px;
-  min-width: 80%;
+  min-width: 100%;
+  height: 260px;
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -104,20 +109,26 @@ const Section = styled.div`
   .social-icons {
     display: flex;
     flex-direction: column;
-    margin: 80px 0 0 50px;
+    height: 156px;
+    margin: 70px 0 0 50px;
+    border-left: 2px solid rgba(227, 169, 107, 1);
+    border-radius: 10px;
 
     .icon {
       border-radius: 10px;
       margin: 5px;
+      display: flex;
 
-      p {
-        margin-top: 10px;
+      a {
+        position: relative;
+        margin: 10px 0 0 10px;
         opacity: 0;
+        text-decoration: none;
       }
 
       img {
-        width: 54px;
-        height: 54px;
+        width: 44px;
+        height: 44px;
       }
     }
   }

@@ -17,17 +17,9 @@ function ContactPage() {
 export default ContactPage;
 
 const ThePage = styled.div`
-  color: white;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   min-height: 100%;
-
-  .footer {
-    border: 2px solid red;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0 auto;
-  }
 `;
