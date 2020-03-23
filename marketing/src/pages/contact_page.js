@@ -9,9 +9,7 @@ function ContactPage() {
     <ThePage>
       <Nav />
       <Form />
-      {/* <div className="footer">
-        <Footer />
-      </div> */}
+      <Footer />
     </ThePage>
   );
 }
@@ -19,7 +17,7 @@ function ContactPage() {
 export default ContactPage;
 
 const ThePage = styled.div`
-  position: relative;
+  color: white;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

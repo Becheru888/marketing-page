@@ -1,7 +1,9 @@
 import React from "react";
 import Nav from "../components/navigation";
 import styled from "styled-components";
+import Footer from "../components/footer";
 import gsap from "gsap";
+import img from "../assets/appDev.svg";
 
 function ProductPage() {
   const shadowDown =
@@ -16,49 +18,39 @@ function ProductPage() {
     <ThePage>
       <Nav />
       <section className="main-content">
-        <div
+        {/* <div
           className="product-1"
           onMouseOver={e => {
             gsap.to(".product-1", {
-              duration: 0.5,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowUp}`,
               backgroundColor: "white",
-              y: howMuchUp,
-              power1: 0.25
+              y: howMuchUp
             });
           }}
           onMouseLeave={e => {
             gsap.to(".product-1", {
-              duration: 1,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowDown}`,
-              backgroundColor: "transparent",
-              y: howMuchDown,
-              power1: 0.25
+              y: howMuchDown
             });
           }}
+          style={{ backgroundImage: `${img}` }}
         ></div>
         <div
           className="product-2"
           onMouseOver={e => {
             gsap.to(".product-2", {
-              duration: 0.5,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowUp}`,
-              y: howMuchUp,
-              backgroundColor: "white",
-              power1: 0.25
+              y: howMuchUp
             });
           }}
           onMouseLeave={e => {
             gsap.to(".product-2", {
-              duration: 1,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowDown}`,
-              y: howMuchDown,
-              backgroundColor: "transparent",
-              power1: 0.25
+              y: howMuchDown
             });
           }}
         ></div>
@@ -66,22 +58,16 @@ function ProductPage() {
           className="product-3"
           onMouseOver={e => {
             gsap.to(".product-3", {
-              duration: 0.5,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowUp}`,
-              backgroundColor: "white",
-              y: howMuchUp,
-              power1: 0.25
+              y: howMuchUp
             });
           }}
           onMouseLeave={e => {
             gsap.to(".product-3", {
-              duration: 1,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowDown}`,
-              backgroundColor: "transparent",
-              y: howMuchDown,
-              power1: 0.25
+              y: howMuchDown
             });
           }}
         ></div>
@@ -89,26 +75,21 @@ function ProductPage() {
           className="product-4"
           onMouseOver={e => {
             gsap.to(".product-4", {
-              duration: 0.5,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowUp}`,
-              backgroundColor: "white",
-              y: howMuchUp,
-              power1: 0.25
+              y: howMuchUp
             });
           }}
           onMouseLeave={e => {
             gsap.to(".product-4", {
-              duration: 1,
-              opacity: 1,
+              duration: 0.6,
               boxShadow: `${shadowDown}`,
-              backgroundColor: "transparent",
-              y: howMuchDown,
-              power1: 0.25
+              y: howMuchDown
             });
           }}
-        ></div>
+        ></div> */}
       </section>
+      <Footer />
     </ThePage>
   );
 }
@@ -137,10 +118,10 @@ const ThePage = styled.div`
       font-family: "Montserrat";
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      border: 2px solid white;
-      margin: 50px 100px;
+      margin: 50px 10px;
+      background-color: white;
       border-radius: 5px;
-      width: 30%;
+      width: 45%;
       height: 300px;
     }
   }

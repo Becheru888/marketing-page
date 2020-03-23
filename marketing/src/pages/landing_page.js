@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Nav from "../components/navigation";
+import Footer from "../components/footer";
 import img from "../assets/icons.svg";
 import gsap from "gsap";
 
@@ -12,6 +14,30 @@ function Landing() {
       power1: 0.25
     });
   });
+
+  const shadowDown =
+    "0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+  const shadowUp =
+    "0 20px 20px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+
+  const howMuchUp = -2;
+  const howMuchDown = 2;
+
+  const hooverOn = () => {
+    gsap.to(".button", {
+      duration: 0.6,
+      boxShadow: `${shadowUp}`,
+      y: howMuchUp
+    });
+  };
+
+  const hooverOff = () => {
+    gsap.to(".button", {
+      duration: 0.6,
+      boxShadow: `${shadowDown}`,
+      y: howMuchDown
+    });
+  };
 
   return (
     <ThePage>
@@ -26,16 +52,25 @@ function Landing() {
             <span className="easyer">EASYER</span>
           </p>
           <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            rhoncus nulla. Maecenas sem lorem, aliquam fermentum metus et,
-            ultricies luctus augue. Curabitur aliquet maximus interdum. Nam
-            congue dictum fermentum.
+            Creăm un software conștient care conectează totul la orice altceva.
+            Ne alăturăm punctelor dintre date, proces și rezultatele afacerii,
+            astfel încât să vă puteți concentra pe luarea deciziilor care îți
+            cresc afacerea.
           </p>
+          <Link
+            className="button"
+            to="/contact"
+            onMouseOver={e => hooverOn()}
+            onMouseLeave={e => hooverOff()}
+          >
+            <p className="contact-link">Contacteaza-ne!</p>
+          </Link>
         </header>
         <section className="soft-png">
           <img srcSet={`${img}`} alt="business-flow"></img>
         </section>
       </div>
+      <Footer />
     </ThePage>
   );
 }
@@ -64,6 +99,22 @@ const ThePage = styled.div`
     margin-top: 100px;
     width: 50%;
 
+    a {
+      margin-top: 30px;
+      height: 50px;
+      text-decoration: none;
+      width: 20%;
+      border-radius: 20px;
+      background-color: rgba(7, 119, 237, 1);
+      color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      p {
+        text-align: center;
+        padding: 13px;
+      }
+    }
+
     .statemant {
       font-size: 4em;
       font-family: "Montserrat";
@@ -86,6 +137,7 @@ const ThePage = styled.div`
       font-family: "Montserrat";
       font-weight: lighter;
       color: white;
+      font-size: 1.2rem;
     }
   }
 `;

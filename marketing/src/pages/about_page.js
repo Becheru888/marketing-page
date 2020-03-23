@@ -15,6 +15,7 @@ function AboutPage() {
       {/* <section className="footer">
         <Footer />
       </section> */}
+      <Footer />
     </ThePage>
   );
 }

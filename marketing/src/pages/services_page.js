@@ -13,6 +13,7 @@ function ServicesPage() {
       {/* <div className="footer">
         <Footer />
       </div> */}
+      <Footer />
     </ThePage>
   );
 }
